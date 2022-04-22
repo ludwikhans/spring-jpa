@@ -1,16 +1,33 @@
 package pl.edu.wszib.springjpa.model;
 
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import javax.persistence.*;
 import java.time.Instant;
 
-public class ToDo {
+@Entity
+@Table
+public class ToDo2 {
 
+  @Id
+  @GeneratedValue
   private Integer id;
+@Column(name = "super_uber_zadanie", nullable = false)
   private String zadanie;
+@Enumerated(EnumType.STRING)
   private ToDoStatus status;
+@Temporal(TemporalType.TIMESTAMP)
+private String mojaData;
   private Instant termin;
+  @CreationTimestamp
   private Instant createdAt;
+  @UpdateTimestamp
   private Instant updatedAt;
+
+  @Transient
+  private String nowaKolumna;
 
   public Integer getId() {
     return id;

@@ -1,15 +1,21 @@
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #spring.jpa.hibernate.ddl-auto=
   datasource:
-    username: wreczyck
-    password: <password>
-    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=wreczyck
+    username: gtruty
+    password: <Grzeg0rzTruty!>
+    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=gtruty
   sql:
     init:
       mode: always
   flyway:
-    user: wreczyck
-    password: <password>
-    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=wreczyck
-    locations: classpath:db/migrations
-    schemas: [wreczyck]
+#    user: wreczyck
+#    password: <password>
+#    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=wreczyck
+#    locations: classpath:db/migrations
+#    schemas: [wreczyck]
     enabled: false
+
+
+
